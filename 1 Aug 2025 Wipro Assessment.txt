@@ -1,0 +1,109 @@
+Q-1. Write a java code to illustrate linkedlist and TreeMap.
+Ans-1
+
+import java.util.LinkedList;
+import java.util.TreeMap;
+
+public class LinkedList&TreeMap {
+    public static void main(String[] args) {
+
+        // -------------------- LinkedList 
+        LinkedList<String> Bikes= new LinkedList<>();
+        fruits.add("Hero");
+        fruits.add("Honda");
+        fruits.add("TVS");
+        fruits.addFirst("Bajaj");
+        fruits.addLast("Yamaha");
+
+        System.out.println("LinkedList elements:");
+        for (String Bike: Bikes) {
+            System.out.println(Bike);
+        }
+
+        // -------------------- TreeMap
+        TreeMap<Integer, String> Cars = new TreeMap<>();
+        studentMap.put(102, "BMW");
+        studentMap.put(101, "Creata");
+        studentMap.put(105, "Vitara");
+        studentMap.put(103, "Alto");
+	System.out.println(Cars);
+        
+    }
+}
+
+Q-2. Write a java code to illustrate abstraction feature of the java.
+Ans-2
+package example;
+
+
+abstract class Vehicle {
+ 
+ abstract void startEngine();
+
+ 
+ void stopEngine() {
+     System.out.println("Engine stopped.");
+ }
+}
+
+
+class Car extends Vehicle {
+ @Override
+ void startEngine() {
+     System.out.println("Car engine started");
+ }
+}
+
+
+class Bike extends Vehicle {
+ @Override
+ void startEngine() {
+     System.out.println("Bike engine started");
+ }
+}
+
+
+public class Abstraction {
+ public static void main(String[] args) {
+     Vehicle car = new Car();
+     car.startEngine();
+     car.stopEngine();
+
+     System.out.println();
+
+     Vehicle bike = new Bike();
+     bike.startEngine();
+     bike.stopEngine();
+ }
+}
+
+Q-3. Please elaborate how try and catch block helps programmer to achieve good programming.
+Ans-3 try and catch block is the part of exception handling we writes the risky code in try block and catch throws the exception.
+	It prevents program from crashing, improve user experience and improve code reliability.
+
+Q-4.  Write a java program to find the Fiboancii series, like 1, 2, 3, 5, etc
+Ans-4
+package example;
+
+public class Fibonacci {
+	
+	public static void series(int a,int b, int n) {
+		if(n==0) {
+			return;
+		}
+		int c=a+b;
+		System.out.println(c);
+		series(b,c,n-1);
+	}
+
+	public static void main(String[] args) {
+		int n=10;
+		int a=0;
+		int b=1;
+		System.out.println(a);
+		System.out.println(b);
+		series(a,b,n-2);
+
+	}
+
+}
